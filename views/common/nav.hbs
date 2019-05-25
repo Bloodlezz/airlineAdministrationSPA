@@ -1,0 +1,20 @@
+<nav>
+    <div class="left-container">
+        <ul>
+            {{#if isLoggedIn}}
+                <li class="{{isActive '#/home'}}"><a href="#/home">Home</a></li>
+                <li class="{{isActive '#/user/myFlights'}}"><a href="#/user/myFlights">Flights</a></li>
+            {{/if}}
+            {{#unless isLoggedIn}}
+                <li class="{{isActive '#/user/login'}}"><a href="#/user/login">Login</a></li>
+                <li class="{{isActive '#/user/register'}}"><a href="#/user/register">Register</a></li>
+            {{/unless}}
+        </ul>
+    </div>
+    {{#if isLoggedIn}}
+        <div class="right-container">
+            <span>Welcome, {{username}}</span>
+            <a href="#/user/logout" class="log-out">Logout</a>
+        </div>
+    {{/if}}
+</nav>

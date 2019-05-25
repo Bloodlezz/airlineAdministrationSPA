@@ -1,0 +1,22 @@
+{{> nav}}
+<section id="viewFlightDetails">
+    <div class="ticket-area">
+        <div class="ticket-area-left">
+            <img src="{{flightData.img}}" alt="Flight picture">
+        </div>
+        <div class="ticket-area-right">
+            <h3>{{flightData.destination}}</h3>
+            <div>from {{flightData.origin}}</div>
+            <div class="data-and-time">
+                {{formatDate flightData.departureDate}} {{flightData.departureTime}}
+                {{#if (isAuthor flightData._acl.creator)}}
+                    <a href="#/flight/edit/{{flightData._id}}" class="edit-flight-detail"></a>
+                {{/if}}
+            </div>
+            <div>
+                {{flightData.seats}} Seats ({{flightData.cost}} per seat)
+            </div>
+        </div>
+    </div>
+</section>
+{{> footer}}

@@ -1,0 +1,24 @@
+{{> nav}}
+<section id="viewEditFlight">
+    <h2>Edit existing flight</h2>
+    <form method="POST" action="#/flight/edit/{{flightData._id}}" id="formEditFlight">
+        <label>Destination:</label>
+        <input type="text" name="destination" placeholder="Destination" value="{{flightData.destination}}" >
+        <label>Origin:</label>
+        <input type="text" name="origin" placeholder="Origin" value="{{flightData.origin}}">
+        <label>Departure Date:</label>
+        <input type="date" id="tt" name="departureDate" value="{{flightData.departureDate}}">
+        <label>Departure Time:</label>
+        <input type="time" name="departureTime" value="{{flightData.departureTime}}">
+        <label>Number of Seats:</label>
+        <input type="text" name="seats" value="{{flightData.seats}}">
+        <label>Cost per seat:</label>
+        <input type="text" name="cost" value="{{flightData.cost}}">
+        <label>Image:</label>
+        <input type="text" name="img" value="{{flightData.img}}">
+        <label>Is Public:</label>
+        <input type="checkbox" name="public" {{isChecked flightData.public}}>
+        <input type="submit" class="save-changes" value="Save Changes">
+    </form>
+</section>
+{{> footer}}
