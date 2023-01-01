@@ -9,9 +9,9 @@
     "sammy": "^0.7.6"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^5.0.3",
-    "webpack": "^4.29.3",
-    "webpack-cli": "^3.3.2"
+    "copy-webpack-plugin": "^11.0.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "scripts": {
     "build": "webpack",
